@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Simple Recorder.js demo with record, stop and pause - addpipe.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- <meta http-equiv="refresh" content="20">  -->
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+ 
+  </head>
+  <body style="background-color: palevioletred;">
+    <div class="<nav class="nav justify-content-center">
+      <a class="nav-link active" href="index.html" style="color: aliceblue;" ><h1><i>WECARE</i></h1></a>
+      
+    </nav></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1 id="patient"><i>PATIENT</i></h1>
+          <div id="translation-patient">
+            <div id="controls">
+              
+              <button id="recordButton">Record</button>
+              <button id="pauseButton" disabled>Pause</button>
+              <button id="stopButton" disabled>Stop</button>
+             </div>
+             <div id="formats">Format: start recording to see sample rate</div>
+             <p><strong>Recordings:</strong></p>
+             <ol id="recordingsList"></ol>
+          </div>
+          <div>
+            <div class="row">
+              <div class="col-md-6">
+                <audio controls>
+                  
+                  <source src="/static/captured_voice.mp3" type="audio/mpeg">
+               
+                </audio>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+       
+        <div class="col-md-6">
+          <h1 id="doctor"><i>DOCTOR</i></h1>
+          <div id="translation-doctor">
+            <div id="controls1">
+              <button id="recordButton1">Record</button>
+              <button id="pauseButton1" disabled>Pause</button>
+              <button id="stopButton1" disabled>Stop</button>
+             </div>
+             <div id="formats1">Format: start recording to see sample rate</div>
+             <p><strong>Recordings:</strong></p>
+             <ol id="recordingsList1"></ol>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-5">
+            <div style="visibility: hidden;" id="doc1">
+              <audio controls>
+              
+                <source src="static/Doctor1.wav" type="audio/mpeg">
+             
+                </audio>
+            </div>
+            <div>
+              <button onclick="myFunction()">Record Doctor </button>
+            </div>
+            <div  style="visibility: hidden;" id=doc2>
+              <audio controls>
+              
+                <source src="static/Doctor2.wav" type="audio/mpeg">
+             
+              </audio>
+            </div>
+            <div>
+              <button onclick="myFunction1()">Record Doctor </button>
+            </div>
+            <div  style="visibility: hidden;" id=doc3>
+              <audio controls>
+              
+                <source src="static/Doctor3.wav" type="audio/mpeg">
+             
+              </audio>
+            </div>
+            <div>
+              <button onclick="myFunction2()">Record Doctor </button>
+            </div>
+            <div  style="visibility: hidden;" id=doc4>
+              <audio controls>
+              
+                <source src="static/Doctor4.wav" type="audio/mpeg">
+             
+              </audio>
+            </div>
+            <div>
+              <button onclick="myFunction3()">Record Doctor </button>
+            </div>
+            <div  style="visibility: hidden;" id=doc5>
+              <audio controls>
+              
+                <source src="static/Doctor5.wav" type="audio/mpeg">
+             
+              </audio>
+            </div>
+            <div>
+              <button onclick="myFunction4()">Record Doctor </button>
+            </div>
+           
+        </div>
+      </div>
+    </div>
+    <footer >
+      <div>
+        <i class="fas fa-copyright   fa fa-align-center" aria-hidden="true">WECARE 2020</i>
+      </div>
+    </footer>
+   
+    <!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+    <script>
+      function myFunction() {
+  var x = document.getElementById("doc1");
+  if (x.style.visibility === "hidden") {
+    x.style.visibility = "visible";
+  } else {
+    x.style.visibility = "hidden";
+  }
+  } 
+  function myFunction1() {
+  var x = document.getElementById("doc2");
+  if (x.style.visibility === "hidden") {
+    x.style.visibility = "visible";
+  } else {
+    x.style.visibility = "hidden";
+  }
+  } 
+  function myFunction2() {
+  var x = document.getElementById("doc3");
+  if (x.style.visibility === "hidden") {
+    x.style.visibility = "visible";
+  } else {
+    x.style.visibility = "hidden";
+  }
+  } 
+  function myFunction3() {
+  var x = document.getElementById("doc4");
+  if (x.style.visibility === "hidden") {
+    x.style.visibility = "visible";
+  } else {
+    x.style.visibility = "hidden";
+  }
+  } 
+  function myFunction4() {
+  var x = document.getElementById("doc5");
+  if (x.style.visibility === "hidden") {
+    x.style.visibility = "visible";
+  } else {
+    x.style.visibility = "hidden";
+  }
+  } 
+  
+    </script>
+  	<script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+    <script src="../static/js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  </body>
+</html>
