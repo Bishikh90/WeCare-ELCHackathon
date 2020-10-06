@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Simple Recorder.js demo with record, stop and pause - addpipe.com</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- <meta http-equiv="refresh" content="20">  -->
+    <!--<meta http-equiv="refresh" content="10"> -->
     <!-- Latest compiled and minified Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../static/css/style.css">
@@ -19,6 +19,7 @@
       <div class="row">
         <div class="col-md-6">
           <h1 id="patient"><i>PATIENT</i></h1>
+          <h2>Language - Hindi</h2>
           <div id="translation-patient">
             <div id="controls">
               
@@ -47,6 +48,7 @@
        
         <div class="col-md-6">
           <h1 id="doctor"><i>DOCTOR</i></h1>
+          <h2>Language - English</h2>
           <div id="translation-doctor">
             <div id="controls1">
               <button id="recordButton1">Record</button>
@@ -63,9 +65,13 @@
             <div style="visibility: hidden;" id="doc1">
               <audio controls>
               
-                <source src="static/Doctor1.wav" type="audio/mpeg">
+                <source src="static/doc1.mp3" type="audio/mpeg">
              
                 </audio>
+                <p ><i class="fas fa-font    ">
+                  हाय में निश्चित रूप से होगा क्या कृपया मुझे बता सकते हैं कि क्या आपके तन में कोई सूजन वाला हिस्सा है. 
+                </i>
+                </p>
             </div>
             <div>
               <button onclick="myFunction()">Record Doctor </button>
@@ -73,9 +79,12 @@
             <div  style="visibility: hidden;" id=doc2>
               <audio controls>
               
-                <source src="static/Doctor2.wav" type="audio/mpeg">
+                <source src="static/doc2.mp3" type="audio/mpeg">
              
               </audio>
+              <p ><i class="fas fa-font    ">
+                कृपया मुझे अपनी उम्र बताएं. कृपया मुझे यह भी बताएं कि क्या आपको अपने तन में कोई बदलाव महसूस होता है.
+              </i></p>
             </div>
             <div>
               <button onclick="myFunction1()">Record Doctor </button>
@@ -83,9 +92,12 @@
             <div  style="visibility: hidden;" id=doc3>
               <audio controls>
               
-                <source src="static/Doctor3.wav" type="audio/mpeg">
+                <source src="static/doc3.mp3" type="audio/mpeg">
              
               </audio>
+              <p ><i class="fas fa-font    ">
+                मैं आपसे एक मैमोग्राम के लिए जाने का अनुरोध करूंगा एक बार आपको रिपोर्ट मिल जाएगी विवरण जांच के लिए कृपया मेरे क्लीनिक पर जाएं.
+              </i></p>
             </div>
             <div>
               <button onclick="myFunction2()">Record Doctor </button>
@@ -93,23 +105,18 @@
             <div  style="visibility: hidden;" id=doc4>
               <audio controls>
               
-                <source src="static/Doctor4.wav" type="audio/mpeg">
+                <source src="static/doc4.mp3" type="audio/mpeg">
              
               </audio>
+              <p ><i class="fas fa-font    ">
+                क्या कुछ और है जिस पर आप चर्चा करना चाहते हैं. 
+
+              </i></p>
             </div>
             <div>
               <button onclick="myFunction3()">Record Doctor </button>
             </div>
-            <div  style="visibility: hidden;" id=doc5>
-              <audio controls>
-              
-                <source src="static/Doctor5.wav" type="audio/mpeg">
-             
-              </audio>
-            </div>
-            <div>
-              <button onclick="myFunction4()">Record Doctor </button>
-            </div>
+            
            
         </div>
       </div>
@@ -154,14 +161,7 @@
     x.style.visibility = "hidden";
   }
   } 
-  function myFunction4() {
-  var x = document.getElementById("doc5");
-  if (x.style.visibility === "hidden") {
-    x.style.visibility = "visible";
-  } else {
-    x.style.visibility = "hidden";
-  }
-  } 
+
   
     </script>
   	<script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
